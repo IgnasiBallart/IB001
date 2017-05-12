@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
@@ -19,3 +20,7 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+/* BACKEND */
+Route::get('login', 'backend\LoginController@index');
+Route::resource('admin','backend\AdminController');
