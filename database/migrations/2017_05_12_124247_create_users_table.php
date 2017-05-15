@@ -23,12 +23,15 @@ class CreateUsersTable extends Migration {
 			$table->string('address');
 			$table->string('mail');
 			$table->integer('deleted');
-
 			$table->integer('team_id')->unsigned();
-			$table->foreign('team_id')->references('id')->on('teams');
 
 			$table->timestamps();
 		});
+
+		Schema::table('users', function($table) {
+				$table->foreign('team_id')->references('id')->on('teams');
+		});
+
 	}
 
 	/**
