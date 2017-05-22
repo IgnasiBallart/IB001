@@ -23,4 +23,5 @@ Route::get('contacto','FrontController@contacto');
 
 /* BACKEND */
 Route::get('login', 'backend\LoginController@index');
-Route::get('admin','backend\AdminController');
+Route::get('admin','backend\AdminController@index');
+Route::resource('usuario','backend\UserController');

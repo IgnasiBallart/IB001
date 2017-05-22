@@ -5,7 +5,7 @@ use IB001\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller {
+class UserController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AdminController extends Controller {
 	 */
 	public function index()
 	{
-		return view('backend.index');
+		//
 	}
 
 	/**
@@ -24,7 +24,7 @@ class AdminController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('backend.usuario.create');
 	}
 
 	/**
