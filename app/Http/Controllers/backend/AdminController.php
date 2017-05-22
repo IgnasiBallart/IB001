@@ -14,7 +14,7 @@ class AdminController extends Controller {
 	 */
 	public function index()
 	{
-		return "hola index admin";
+		return view('index');
 	}
 
 	/**
@@ -24,7 +24,7 @@ class AdminController extends Controller {
 	 */
 	public function create()
 	{
-		return "hola create admin";
+		return view('create');
 	}
 
 	/**

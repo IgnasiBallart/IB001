@@ -12,15 +12,15 @@
 */
 
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function () {
+    return view('index');
+});
 
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+/* FRONTEND */
+Route::get('partidas','FrontController@partidas');
+Route::get('equipos','FrontController@equipos');
+Route::get('contacto','FrontController@contacto');
 
 /* BACKEND */
 Route::get('login', 'backend\LoginController@index');
-Route::resource('admin','backend\AdminController');
+Route::get('admin','backend\AdminController');
